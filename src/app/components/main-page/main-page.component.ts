@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
-import {SocialAuthService} from 'angularx-social-login';
-import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-main-page',
@@ -9,12 +8,6 @@ import {Router} from '@angular/router';
 })
 export class MainPageComponent {
 
-  constructor(private router: Router,
-              public socialAuthServive: SocialAuthService) {
-  }
-
-  logout(): void {
-    this.socialAuthServive.signOut().then(() => this.router.navigate(['login']));
-  }
+  
 
 }

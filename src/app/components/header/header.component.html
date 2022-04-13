@@ -1,0 +1,16 @@
+<mat-toolbar class="header mat-elevation-z4">
+    <span>
+        <a routerLink="/">
+            <img class="logo" src="assets/logo-login.png" alt="logo">
+        </a>
+    </span>
+
+    <span class="example-spacer"></span>
+    <div class="user" *ngIf="socialAuthServive.authState | async as socialUser">
+        {{socialUser.name}}
+    </div>
+    <mat-divider class="mat-divider-vertical"></mat-divider>
+    <button style="color: #3F51B5;" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon>
+    </button>
+</mat-toolbar>

@@ -19,6 +19,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { NavComponent } from './components/nav/nav.component';
+import { HeaderComponent } from './components/header/header.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+
 
 @NgModule({
   declarations: [
@@ -26,13 +31,16 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     LoginComponent,
     MainPageComponent,
     FooterComponent,
+    NavComponent,
+    HeaderComponent,
 
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       { path: 'login', component: LoginComponent },
-      { path: 'mainpage', component: MainPageComponent, canActivate: [AuthGuardService] },
+      // { path: 'mainpage', component: MainPageComponent, canActivate: [AuthGuardService] },
+      { path: 'mainpage', component: MainPageComponent},
       { path: '**', component: LoginComponent }
     ]),
     BrowserAnimationsModule,
@@ -47,7 +55,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatDividerModule,
     MatIconModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [{
     provide: 'SocialAuthServiceConfig',

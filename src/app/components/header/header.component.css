@@ -1,0 +1,22 @@
+div {
+    margin: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo {
+    max-height: 120px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.mat-divider-vertical {
+    height: 100%;
+    width: 0px !important;
+    position: inherit !important;
+}
